@@ -1,0 +1,108 @@
+html {
+    background-color: $color-bg-white;
+    color: $color-bg-dark;
+    font-family: $font-roboto-slab;
+    min-height: 100%;
+    position: relative;
+
+    @include media($mobile) {
+        background-color: $color-bg-white;
+    }
+
+}
+
+@media screen {
+    html[lang] {
+        margin-top: 0 !important;
+    }
+}
+
+body {
+    font-family: $font-roboto-slab;
+    font-weight: $font-weight-normal;
+
+    // To accomodate the footer
+    padding-bottom: 65px;
+}
+
+.main-wrapper {
+    position: relative;
+
+    @include media($mobile) {
+        background-color: #fff;
+    }
+
+    &:not(.index-page) {
+        @include transition-property(transform);
+        @include transition-duration(.3s);
+        @include transition-timing-function($ease-out-back);
+
+        margin-bottom: 80px;
+        padding-top: 200px;
+
+        @include media($mobile) {
+            margin: 0;
+            padding-top: 100px;
+        }
+    }
+
+    &.reversed {
+        background-color: $color-bg-dark;
+    }
+}
+
+main,
+section {
+    margin: 0 auto;
+}
+
+section {
+    min-height: calc(100vh - #{$nav-height});
+}
+
+.section__container {
+    @include outer-container;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        ol {
+            list-style: decimal;
+        }
+    }
+}
+
+a {
+    color: $color-bg-white;
+}
+
+.table-row {
+    @include span-columns(12);
+    @include row(table);
+    margin-left: 15px;
+
+    @include media($mobile) {
+        @include span-columns(16);
+        @include row(table);
+
+        margin-left: 0;
+    }
+
+    &:last-child {
+        padding-bottom: 25px;
+    }
+}
+
+.table-col {
+    &:last-child {
+        @include reset-display;
+    }
+}
+
+img {
+    -ms-interpolation-mode: bicubic;
+}

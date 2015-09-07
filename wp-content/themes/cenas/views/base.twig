@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js{{htmlTagClass}}"> <!--<![endif]-->
+    <head>
+        {% block head %}
+            <link rel="icon" href="{{site.theme.link}}/images/favicon.png" type="image/png">
+
+            <meta charset="{{site.charset}}" />
+
+            <title>{{ fn("wp_title", " | ", true, "right")}} {{site.name}}</title>
+
+            <meta name="description" content="{{site.description}}">
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            <meta name="viewport" content="width=device-width minimum-scale=1.0 maximum-scale=1.0" />
+
+            <link rel="pingback" href="{{site.pingback_url}}" />
+
+            <link rel="stylesheet" href="{{site.theme.link}}/css/style.css" type="text/css" />
+
+            {% if isDev %}
+                <link rel="stylesheet" href="{{site.theme.link}}/css/hashgrid.css">
+            {% endif %}
+
+            {% block pageStylesheets %}{% endblock %}
+
+            {% if not isDev %}
+                {# <script src="{{site.theme.link}}/js/modernizr.js"></script> #}
+            {% endif %}
+
+            {{function('wp_head')}}
+        {% endblock %}
+    </head>
+
+    <body {% block body_class %}{% endblock %}>
+        {% block header %}
+            {% include '/partials/header.twig' %}
+        {% endblock %}
+
+        {% block main %}
+            <main>
+                {% block content %}{% endblock %}
+            </main>
+        {% endblock %}
+
+       {% block footer %}
+            {% include '/partials/footer.twig' %}
+        {% endblock %}
+
+        <script src="{{site.theme.link}}/bower_components/modernizr/modernizr.js"></script>
+        <script src="{{site.theme.link}}/bower_components/jquery/dist/jquery.js"></script>
+        <script src="{{site.theme.link}}/bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="{{site.theme.link}}/js/main.js"></script>
+        <script src="{{site.theme.link}}/js/classie.js"></script>
+        <script src="{{site.theme.link}}/bower_components/parallax/deploy/jquery.parallax.js"></script>
+        <script src="{{site.theme.link}}/bower_components/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
+        <script src="{{site.theme.link}}/bower_components/GreenSock-JS-master/src/uncompressed/TweenMax.js"></script>
+        <script src="{{site.theme.link}}/bower_components/ScrollMagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+        <script src="{{site.theme.link}}/bower_components/ScrollMagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+        <script src="{{site.theme.link}}/bower_components/jquery.crSpline.js"></script>
+
+        <script src="//localhost:35730/livereload.js"></script>
+
+        {% if isDev %}
+            <script src="{{site.theme.link}}/bower_components/hashgrid/hashgrid.js"></script>
+            <script> $(function() { new hashgrid(); }); </script>
+        {% endif %}
+
+        {% block pageScripts %}{% endblock %}
+
+        <script>
+            $(function() {
+                // Grid.init();
+
+                $("form").validate();
+
+                //myAnimation();
+				fly();
+                $('#scene').parallax();
+                $('.interests').parallax();
+
+            });
+        </script>
+
+
+         {{ function('wp_footer') }}
+    </body>
+</html>

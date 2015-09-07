@@ -1,0 +1,40 @@
+// Colors
+$color-bg-white: #fff;
+$color-bg-light: #ebebeb;
+$color-bg-dark: #363636;
+$color-bg-red: #b7242b;
+
+$color-main-white: #fff;
+$color-main-gray: #ebebeb;
+$color-main-red: #b7242b;
+$color-main-dark: #363636;
+
+$color-facebook-blue: #3b5998;
+$color-twitter-blue: #55acee;
+$color-pinterest-red: #cb2027;
+$color-border-gray: #727272;
+$color-footer-dark: #222121;
+$color-success: #2cdd6b;
+$color-divider-red: #ce5158;
+$color-divider-gray: #484848;
+
+
+// Media queries
+$big-desktop: new-breakpoint(min-width 1800px 24);
+$small-desktop: new-breakpoint(max-width 1024px 24);
+$mobile: new-breakpoint(max-width 768px 24);
+$small-mobile: new-breakpoint(max-width 481px 12);
+
+// Typography
+$font-roboto-slab: 'Roboto Slab', serif;
+$font-roboto: 'Roboto', sans-serif;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+// Header
+$nav-height: 70px;

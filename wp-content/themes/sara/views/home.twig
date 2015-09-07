@@ -1,0 +1,13 @@
+{% extends "base.twig" %}
+
+{% block pageStylesheets %}
+    <link rel="stylesheet" href="{{site.theme.link}}/css/pages/homepage.css">
+{% endblock %}
+
+{% block pageScripts %}
+    <script src="{{site.theme.link}}/js/homepage.js"></script>
+{% endblock %}
+
+{% block content %}
+    {% include '/partials/homepage.twig' %}
+{% endblock %}

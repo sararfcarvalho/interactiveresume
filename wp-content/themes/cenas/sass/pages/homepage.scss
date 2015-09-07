@@ -1,0 +1,350 @@
+@import 'common';
+
+body {
+    background: url(../../images/fundo_final.jpg);
+    padding-bottom: 0;
+	max-height: 4280px;
+	max-width: 100vw;
+
+	
+ul{
+	position:fixed;
+	.stars{
+		position: relative;
+		width: 100vw;
+
+		li{
+		img{
+			width: 100%;
+			height: auto;
+			}
+		}
+	}
+}
+
+}
+
+
+
+.content {
+	width: 800px;
+	min-height: 4280px;
+	margin: 0 auto;
+	position: relative;
+	//overflow: hidden;
+
+	.planets{
+	top: 930px;
+	position:relative;
+	cursor: pointer;
+	display: block;
+		
+		#planet5, #planet6, #planet7{
+			width: 8%;
+			position: relative;
+			
+		}
+		#planet6{
+		top: -60px;
+		}
+		#planet7{
+		top: 60px;
+		left: 45px;
+		}
+		#planet5{
+		top: -190px;
+		left: 10px;
+		}
+
+		.birth{
+		position: relative;
+		top: -100px;
+		display: inline-block;
+		width: 20%;
+		
+			#planet2{
+				width: 100%;
+			}	
+
+			#et1{
+				width:130%;		
+				opacity: 0;
+				z-index: 1;
+				position: absolute;	
+				top: -140px;
+				left: 10px;
+			}
+
+			&:hover {
+				#et1{
+				opacity: 1;						
+				}
+			}		
+		}
+		.english{
+		display: inline-block;
+		position: relative;
+		width: 25%;
+		top: 70px;
+		
+			#planet3{
+				width: 100%;
+				}
+			
+			#et2{
+				opacity: 0;
+				left: -20px;
+				top: -230px;
+				z-index: 1;
+				position: absolute;	
+				width: 100%;
+			}	
+
+			&:hover {
+				#et2{
+					opacity: 1;						
+				}
+			}		
+		}
+
+		.cm{
+		display: inline-block;
+		position: relative;
+		width: 25%;
+		top: -30px;
+		
+		#planet4{
+				width: 130%;
+			}	
+			#et3{
+				opacity: 0;
+				left: 50px;
+				top: -195px;	
+				position: absolute;
+				width: 130%;
+				z-index: 1;
+
+				}
+			&:hover {
+				#et3{
+				opacity: 1;						
+				}
+			}		
+		}
+	}
+
+}
+
+.moon{
+	position: fixed;
+	top: 5%;
+	left: 41vw;
+	img{
+		width: 250px;
+		height: auto;
+	}
+}
+#trigger{
+	position: relative;
+
+	#plane{
+		position: absolute;
+		left: -350px;
+		top: 500px;
+		width: 70px;
+	}
+}
+#target{
+	
+}
+
+.light{
+	background-image: url(/wp-content/themes/cenas/images/spaceshiplight.png);
+	background-repeat: no-repeat;
+	background-size: 240px;
+	position: relative;
+	z-index:3;
+	top: 834px;
+	left: 35%;
+}
+
+#trigger2{
+	position:absolute;
+	width:640px;
+	top: 1850px;
+	left: 0;
+	#spaceship{
+		width: 12%;
+	}
+}
+
+#target2 {
+	background-image: url(../../images/spaceship.png);
+	background-repeat: no-repeat;
+	background-size: 300px;
+	height: 530px;
+	left: -550px;
+	position: relative;
+	width: 490px;
+}
+	.skillsprog{
+		position: relative;
+		background-image: url(../../images/spaship_skills.png);
+		background-repeat: no-repeat;
+		background-size: 455px;
+		background-position: 173px 87px;
+		position: relative;
+		width: 550px;
+		height: 610px;
+	}
+
+.skills-prog{
+	position: relative;	
+	top: 1080px;
+	width: 60%;
+		img{
+		width: 100%;
+		}
+}
+
+.skills-software{
+	position: relative;	
+	top: 1600px;
+	width: 60%;
+		img{
+		width: 100%;
+		}
+}
+.skills{
+	left: -950px;
+	top: 1700px;
+	width:100%;
+	height:100px;
+	position:relative;
+
+		img{
+		width: 100%;
+		}
+
+}
+.cometa{
+	left: -972px;
+	top: 550px;
+	width:60%;
+	height:100px;
+	position:relative;
+
+		img{
+		width: 100%;
+		}
+}
+.spaceship_me{
+	#spaceshipme{
+	display: none;
+	}
+}
+
+.final{
+	top: 2000px;
+	width:100%;
+	height:300px;
+	position:relative;
+
+	#spaceshipme{
+		position: absolute;
+		left: -200px;
+		//top: 1950px;
+		width: 25%;
+	}
+
+	.interests{
+		position: absolute;
+		margin-right: 30px;
+
+		#coffee{
+			left: 100px !important;
+			img{
+			width: 350px !important;
+			height: auto;
+			}
+		}
+		#book{
+			left: 5px !important;
+			img{
+			width: 350px !important;
+			height: auto;
+			}
+		}
+		#pencil{
+			left: 70px !important;
+			z-index: 4;
+			img{
+				width: 250px !important;
+				height: auto;
+				}
+		}
+		#placa{
+		top:420px !important;
+		left:160px !important;
+		z-index: 10 !important;
+			img{
+			width: 350px !important;			
+			}
+		}
+	}
+}
+.me{
+	width: 160px;
+	height: auto;
+	top: 3740px;
+	position:absolute;
+	left: 60px;
+	z-index:4;
+	img{
+		width: 100%;
+	}
+}
+.earth{
+	position: relative;
+	width: 100%;
+	top: 2099px;
+	z-index: 0;
+	img{
+	width:100%;
+	}
+}
+
+.rocket{
+	width: 370px;
+	height: 498px;
+	top: 2054px;
+	position:relative;
+	left: 380px;
+	z-index: 2;
+
+	img{
+	width: 100%;
+	}
+
+	.buttons{
+		position:absolute;
+		left: 113px;
+		top: 161px;
+		width: 39%;
+
+		img{
+			width: 100%;
+			height: auto;
+			//top:50px;
+			}
+		#be:hover{
+			content: url(/wp-content/themes/cenas/images/buttons_be_hover.png);
+		}
+		#in:hover{
+			content: url(/wp-content/themes/cenas/images/buttons_in_hover.png);
+		}
+	}
+
+}
+
+

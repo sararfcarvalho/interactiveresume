@@ -1,0 +1,75 @@
+// http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/
+@function parse-int($n) {
+    @return $n / ($n * 0 + 1);
+}
+
+@mixin rem-values($property, $values) {
+    $px : ();
+    $rem: ();
+
+    @each $value in $values {
+
+        @if $value == 0 or $value == auto {
+            $px : append($px , $value);
+            $rem: append($rem, $value);
+        } @else {
+            $unit: unit($value);
+            $val: parse-int($value);
+
+            @if $unit == 'px' {
+                $px : append($px, $value);
+                $rem: append($rem, rem($val));
+            } @else {
+                @warn 'rem-values only accepts px values';
+            }
+        }
+    }
+
+    @if $px == $rem {
+        #{$property}: $px;
+    } @else {
+        #{$property}: $px;
+        #{$property}: $rem;
+    }
+}
+
+@mixin font-size($size, $line-height: null) {
+    @include rem-values(font-size, $size);
+
+    @if $line-height != null {
+        line-height: $line-height;
+        line-height: #{($line-height / $size)}em;
+    }
+}
+
+
+@mixin cross($size: 100px, $color: #000, $thickness: 20%) {
+    @include transform(rotate(45deg));
+
+    display: block;
+    height: $size;
+    position: relative;
+    width: $size;
+
+    &:after,
+    &:before {
+        background: $color;
+        content: '';
+        position: absolute;
+    }
+
+    &:before {
+        height: 100%;
+        left: 50%;
+        margin-left: ($thickness * -10%)/20%;
+        width: $thickness;
+    }
+
+    &:after {
+        height: $thickness;
+        left: 0;
+        margin-top: ($thickness * -10%)/20%;
+        top: 50%;
+        width: 100%;
+    }
+}

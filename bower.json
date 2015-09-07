@@ -1,0 +1,16 @@
+{
+  "name": "cenas",
+  "version": "0.1.0",
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "~2.1.1",
+    "normalize-scss": "~3.0.1",
+    "hashgrid": "*",
+    "jquery-deparam": "~0.2.0",
+    "jqfactory": "https://github.com/gfranko/jqfactory.git#~0.3.0",
+    "hammerjs": "2.0.x",
+    "jquery-hammerjs": "*",
+    "jquery-validation": "~1.13.1",
+    "parallax": "~2.1.3"
+  }
+}
